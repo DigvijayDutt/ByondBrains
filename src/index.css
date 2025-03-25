@@ -36,12 +36,14 @@ nav{
 
 h3{
   text-align: center;
+  color:rgb(177, 12, 177);
 }
 
 button{
   padding: 0.50% 1%;
   border-radius: 10px;
   border: none;
+  background-color: rgb(177, 12, 177);
 }
 
 a{
