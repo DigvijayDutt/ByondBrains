@@ -144,9 +144,10 @@ a{
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  align-items: center;
   gap: 3%;
-  height: 500px;
-  width: fit-content;
+  height: fit-content;
+  width: 1300px;
 }
 
 .Card{
@@ -156,6 +157,7 @@ a{
   background-color: rgba(177, 12, 177, 0.396);
   padding: 3%;
   border-radius: 10px;
+  height: 400px;
 }
 
 .Card .MainImage{
