@@ -1,4 +1,5 @@
 import Navbar from '../assets/Navbar';
+import Footer from '../assets/Footer';
 function Home(){
     return(
         <>
@@ -66,6 +67,7 @@ function Home(){
                     </div>
                 </div>
             </div>
+            <Footer />
         </>
     );
 }

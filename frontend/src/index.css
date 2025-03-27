@@ -155,7 +155,7 @@ a{
   flex-direction: column;
   height: fit-content;
   background-color: rgba(177, 12, 177, 0.396);
-  padding: 3%;
+  padding: 1%;
   border-radius: 10px;
   height: 400px;
 }
@@ -196,4 +196,29 @@ a{
 
 .flexstart{
   justify-content: flex-start;
+}
+
+.FooterContainer{
+  background-color: #310055F5;
+  color: white;
+  max-width: 100%;
+  display: flex ;
+  flex-direction: column;
+  padding: 1%;
+}
+
+.Copyright{
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.Copyright h6{
+  position: absolute;
+  left: 50%;
+}
+
+.HomeTable{
+  max-width: 60%;
 }
