@@ -48,10 +48,12 @@ button{
 
 a{
   text-align: end;
+  margin-bottom: 8px;
 }
 
 .Container{
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-top: 5%;
@@ -99,6 +101,8 @@ a{
   border-radius: 7px;
   height: 35px;
   width: 100%;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .SignInFormInput::placeholder{
@@ -135,3 +139,122 @@ a{
   background-size: 7%;
 }
 
+.CardsContainer{
+  margin: 4% 0%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 3%;
+  height: fit-content;
+  width: 1300px;
+}
+
+.Card{
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  background-color: rgba(177, 12, 177, 0.396);
+  padding: 1%;
+  border-radius: 10px;
+  height: 400px;
+}
+
+.Card .MainImage{
+  max-width: 300px;
+  max-height: 300px;
+  border-radius: 10px;
+}
+
+.Card .svg{
+  max-width: 20px;
+}
+
+.Card .text{
+  padding: 2%;
+  color: rgb(48, 1, 93);
+  margin: 2% 0%;
+}
+
+.brow{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: fit-content;
+}
+
+.brow a{
+  display: flex;
+  align-items: center;
+  color: rgb(48, 1, 93);
+}
+
+.mb{
+  margin-bottom: 12%;
+}
+
+.flexstart{
+  justify-content: flex-start;
+}
+
+.FooterContainer{
+  background-color: #310055F5;
+  color: white;
+  max-width: 100%;
+  display: flex ;
+  flex-direction: column;
+  padding: 1%;
+}
+
+.Copyright{
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.Copyright h6{
+  position: absolute;
+  left: 50%;
+}
+
+.HomeTable{
+  max-width: 60%;
+}
+
+.CircleSmallImage{
+  max-width: 50px;
+  border-radius: 50%;
+  border: 5px solid white;
+  object-fit: cover;
+  margin-left: -15px;
+}
+
+.Databar{
+  border: 2px solid #310055;
+  width: 1300px;
+  max-width: 1300px;
+  padding: 5px 10%;
+  border-radius: 20px;
+  margin-bottom: 2%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.Databar h2{
+  margin-right: 30px;
+}
+
+.Databar h4{
+  margin-left: 30px;
+  font-weight: normal;
+  color: black;
+}
+
+.Databar div h4{
+  color: #310055;
+  font-weight: normal;
+}
