@@ -226,6 +226,9 @@ a{
 .CircleSmallImage{
   max-width: 50px;
   border-radius: 50%;
+  border: 5px solid white;
+  object-fit: cover;
+  margin-left: -15px;
 }
 
 .Databar{
