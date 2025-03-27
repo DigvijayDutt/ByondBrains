@@ -1,0 +1,61 @@
+.FAQContainer {
+    width: 60%;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.FAQTitle {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.FAQList {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.FAQItem {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.Question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.Arrow {
+    transition: transform 0.3s ease;
+    font-size: 18px;
+}
+
+.Arrow.open {
+    transform: rotate(180deg);
+}
+
+.Answer {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #444;
+    text-align: left;
+    padding: 10px;
+    background: #fff;
+    border-radius: 5px;
+    border-left: 4px solid #007bff;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+/* Add hover effect */
+.FAQItem:hover {
+    background: #f1f1f1;
+}
