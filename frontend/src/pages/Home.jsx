@@ -96,7 +96,7 @@ function Home() {
                 </div>
                 <div className='FAQContainer'>
                   <h2 className='FAQTitle'>FAQs</h2>
-                  <div className='FAQList'>
+                    <div className='FAQList'>
                       {faqs.map((faq, index) => (
                           <div key={index} className='FAQItem'>
                               <div className='Question' onClick={() => toggleFAQ(index)}>
@@ -106,11 +106,12 @@ function Home() {
                               {openFAQ === index && <div className='Answer'>{faq.answer}</div>}
                           </div>
                       ))}
-                 </div>
+                    </div>
+                </div>
             </div>
             <Footer />
         </>
-    );
+    );                  
 }
 
 export default Home;
