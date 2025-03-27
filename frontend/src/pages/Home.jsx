@@ -66,6 +66,18 @@ function Home(){
                         </div>
                     </div>
                 </div>
+                <div className="Databar">
+                    <div className='brow'>
+                        <h2>18,723+</h2>
+                        <img src="src/assets/man.png" alt="" className='CircleSmallImage'/>
+                        <img src="src/assets/man.png" alt="" className='CircleSmallImage'/>
+                        <img src="src/assets/man.png" alt="" className='CircleSmallImage'/>
+                        <h4>Got wonderful results</h4>
+                    </div>
+                    <div>
+                        <h4>Your learning is important. Here is what our previous students across the globe have to say...</h4>
+                    </div>
+                </div>
             </div>
             <Footer />
         </>

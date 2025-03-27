@@ -222,3 +222,36 @@ a{
 .HomeTable{
   max-width: 60%;
 }
+
+.CircleSmallImage{
+  max-width: 50px;
+  border-radius: 50%;
+}
+
+.Databar{
+  border: 2px solid #310055;
+  width: 1300px;
+  max-width: 1300px;
+  padding: 5px 10%;
+  border-radius: 20px;
+  margin-bottom: 2%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.Databar h2{
+  margin-right: 30px;
+}
+
+.Databar h4{
+  margin-left: 30px;
+  font-weight: normal;
+  color: black;
+}
+
+.Databar div h4{
+  color: #310055;
+  font-weight: normal;
+}
