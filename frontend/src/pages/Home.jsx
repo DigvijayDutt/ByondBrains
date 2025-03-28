@@ -94,6 +94,96 @@ function Home() {
                         <h4>Your learning is important. Here is what our previous students across the globe have to say...</h4>
                     </div>
                 </div>
+
+
+
+
+                <div className="TestimonialCards">
+                        <div className="Card2">
+                            <img src="src/assets/PngItem_4042710.png" alt="Profile" className="ProfileImage" />
+                            <h4>Ted</h4>
+                            <p>
+                                "My son has studied for almost a year between 2020 and 2021, and I am very thankful 
+                                for the programming background ByondBrains has developed for my son. I'm sure it will
+                                help him in his graduation."
+                            </p>
+                            <div className="Stars">★★★★★</div>
+                        </div>
+
+                        <div className="Card2">
+                            <img src="src/assets/PngItem_4042710.png" alt="Profile" className="ProfileImage" />
+                            <h4>If-elif-else block in Python</h4>
+                            <p>
+                                "Shaurya has had an interest in Python since he was 9 and started learning 
+                                from ByondBrains. Look at the confidence he shows in explaining the topic."
+                            </p>
+                            <div className="Stars">★★★★★</div>
+                        </div>
+
+                        <div className="Card2">
+                            <img src="src/assets/PngItem_4042710.png" alt="Profile" className="ProfileImage" />
+                            <h4>Ted</h4>
+                            <p>
+                                "Shaurya has had an interest in Python since he was 9 and started learning 
+                                from ByondBrains. Look at the confidence he is showing in explaining the topic."
+                            </p>
+                            <div className="Stars">★★★★★</div>
+                        </div>
+                    </div>
+
+                    <h3 className="CommunityHeading">Community contributions by ByondBrains</h3>
+
+
+
+
+
+
+                    <div className="container3">
+            <div className="content-box3">
+                <img src="src/assets/comunity.png" alt="Group of people working" className="image3" />
+                <div className="text-content3">
+                    <h2>Touching Lives in Rural Areas</h2>
+                    <p>
+                        ByondBrains team has been spreading knowledge across different diverse areas in India. 
+                        We value and encourage imparting knowledge versus selling courses.
+                    </p>
+                    <button>Begin Your Journey</button>
+                </div>
+            </div>
+
+            <div className="content-box3">
+                <div className="text-content3">
+                    <h2>Touching Lives in Rural Areas</h2>
+                    <p>
+                        ByondBrains team has been spreading knowledge across different diverse areas in India. 
+                        We value and encourage imparting knowledge versus selling courses.
+                    </p>
+                    <button>Begin Your Journey</button>
+                </div>
+                <img src="src/assets/comunity.png" alt="Group of people working" className="image3" />
+            </div>
+
+            <div className="content-box3">
+                <img src="src/assets/comunity.png" alt="Group of people working" className="image3" />
+                <div className="text-content3">
+                    <h2>Touching Lives in Rural Areas</h2>
+                    <p>
+                        ByondBrains team has been spreading knowledge across different diverse areas in India. 
+                        We value and encourage imparting knowledge versus selling courses.
+                    </p>
+                    <button>Begin Your Journey</button>
+                </div>
+            </div>
+        </div>
+
+                
+
+
+
+
+
+
+
                 <div className='FAQContainer'>
                   <h2 className='FAQTitle'>FAQs</h2>
                     <div className='FAQList'>
@@ -115,3 +205,40 @@ function Home() {
 }
 
 export default Home;
+        <div className="container">
+            <div className="content-box">
+                <img src="/images/group.jpg" alt="Group of people working" className="image" />
+                <div className="text-content">
+                    <h2>Touching Lives in Rural Areas</h2>
+                    <p>
+                        ByondBrains team has been spreading knowledge across different diverse areas in India. 
+                        We value and encourage imparting knowledge versus selling courses.
+                    </p>
+                    <button>Begin Your Journey</button>
+                </div>
+            </div>
+
+            <div className="content-box">
+                <div className="text-content">
+                    <h2>Touching Lives in Rural Areas</h2>
+                    <p>
+                        ByondBrains team has been spreading knowledge across different diverse areas in India. 
+                        We value and encourage imparting knowledge versus selling courses.
+                    </p>
+                    <button>Begin Your Journey</button>
+                </div>
+                <img src="/images/group.jpg" alt="Group of people working" className="image" />
+            </div>
+
+            <div className="content-box">
+                <img src="/images/group.jpg" alt="Group of people working" className="image" />
+                <div className="text-content">
+                    <h2>Touching Lives in Rural Areas</h2>
+                    <p>
+                        ByondBrains team has been spreading knowledge across different diverse areas in India. 
+                        We value and encourage imparting knowledge versus selling courses.
+                    </p>
+                    <button>Begin Your Journey</button>
+                </div>
+            </div>
+        </div>
