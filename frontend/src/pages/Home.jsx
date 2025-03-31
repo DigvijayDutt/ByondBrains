@@ -24,6 +24,7 @@ function Home() {
         <>
             <Navbar />
             <div className='Container'>
+                {/* LOGIN AND SIGN UP FORM CONTAINER */}
                 <div className='HeroContainer'>
                     <h1>Start your AI learning TODAY</h1>
                     <div className='FormContainer'>
@@ -34,6 +35,7 @@ function Home() {
                         {formType === "Signin" ? <SignupForm /> : <LoginForm />}
                     </div>
                 </div>
+                {/* POPULAR COURSES CONTAINER */}
                 <div className='CardsContainer'>
                     <div className='Card'>
                         <img className='MainImage' src='src/assets/img/DS.jpg' />
@@ -78,6 +80,7 @@ function Home() {
                         </div>
                     </div>
                 </div>
+                {/* DATABAR WITH IMAGES */}
                 <div className="Databar">
                     <div className='brow'>
                         <h2>18,723+</h2>
@@ -90,6 +93,7 @@ function Home() {
                         <h4>Your learning is important. Here is what our previous students across the globe have to say...</h4>
                     </div>
                 </div>
+                {/* TESTIMONIAL CARDS */}
                 <div className="TestimonialCards">
                         <div className="Card2">
                             <img src="src/assets/PngItem_4042710.png" alt="Profile" className="ProfileImage" />
@@ -122,45 +126,46 @@ function Home() {
                             <div className="Stars">★★★★★</div>
                         </div>
                 </div>
-
+                {/* COMUNITY CARDS */}
                 <h3 className="CommunityHeading">Community contributions by ByondBrains</h3>
                 <div className="container3">
-            <div className="content-box3">
-                <img src="src/assets/comunity.png" alt="Group of people working" className="image3" />
-                <div className="text-content3">
-                    <h2>Touching Lives in Rural Areas</h2>
-                    <p>
-                        ByondBrains team has been spreading knowledge across different diverse areas in India. 
-                        We value and encourage imparting knowledge versus selling courses.
-                    </p>
-                    <button className="CCbutton">Begin Your Journey</button>
-                </div>
-            </div>
+                    <div className="content-box3">
+                        <img src="src/assets/comunity.png" alt="Group of people working" className="image3" />
+                        <div className="text-content3">
+                            <h2>Touching Lives in Rural Areas</h2>
+                            <p>
+                                ByondBrains team has been spreading knowledge across different diverse areas in India. 
+                                We value and encourage imparting knowledge versus selling courses.
+                            </p>
+                            <button className="CCbutton">Begin Your Journey</button>
+                        </div>
+                    </div>
 
-            <div className="content-box3">
-                <div className="text-content3">
-                    <h2>Touching Lives in Rural Areas</h2>
-                    <p>
-                        ByondBrains team has been spreading knowledge across different diverse areas in India. 
-                        We value and encourage imparting knowledge versus selling courses.
-                    </p>
-                    <button className="CCbutton">Begin Your Journey</button>
-                </div>
-                <img src="src/assets/comunity.png" alt="Group of people working" className="image3" />
-            </div>
+                    <div className="content-box3">
+                        <div className="text-content3">
+                            <h2>Touching Lives in Rural Areas</h2>
+                            <p>
+                                ByondBrains team has been spreading knowledge across different diverse areas in India. 
+                                We value and encourage imparting knowledge versus selling courses.
+                            </p>
+                            <button className="CCbutton">Begin Your Journey</button>
+                        </div>
+                        <img src="src/assets/comunity.png" alt="Group of people working" className="image3" />
+                    </div>
 
-            <div className="content-box3">
-                <img src="src/assets/comunity.png" alt="Group of people working" className="image3" />
-                <div className="text-content3">
-                    <h2>Touching Lives in Rural Areas</h2>
-                    <p>
-                        ByondBrains team has been spreading knowledge across different diverse areas in India. 
-                        We value and encourage imparting knowledge versus selling courses.
-                    </p>
-                    <button className="CCbutton">Begin Your Journey</button>
+                    <div className="content-box3">
+                        <img src="src/assets/comunity.png" alt="Group of people working" className="image3" />
+                        <div className="text-content3">
+                            <h2>Touching Lives in Rural Areas</h2>
+                            <p>
+                                ByondBrains team has been spreading knowledge across different diverse areas in India. 
+                                We value and encourage imparting knowledge versus selling courses.
+                            </p>
+                            <button className="CCbutton">Begin Your Journey</button>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
+                {/* FAQ BOX */}
                 <div className='FAQContainer'>
                   <h2 className='FAQTitle'>FAQs</h2>
                     <div className='FAQList'>
