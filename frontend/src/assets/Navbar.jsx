@@ -11,7 +11,7 @@ function Navbar(){
                     <li>Community</li>
                     <li>FAQs</li>
                 </ul>
-                <button>Log In</button>
+                <button className="Navbutton">Log In</button>
             </nav>
         </>
     );

@@ -39,7 +39,7 @@ h3{
   color:rgb(177, 12, 177);
 }
 
-button{
+.Navbutton{
   padding: 0.50% 1%;
   border-radius: 10px;
   border: none;
@@ -93,6 +93,7 @@ a{
   background-color: white;
   color: rgb(48, 1, 93);
   border: 3px solid rgb(48, 1, 93);
+  border-radius: 5px;
 }
 
 .SignInFormInput{
@@ -124,12 +125,16 @@ a{
 .selected{
   background-color: rgb(177, 12, 177);
   color: white;
-  padding: 1% 13%;
+  padding: 3% 13%;
   border-radius: 5px;
+  border: none;
 }
 
 .SignInLi{
   padding: 1% 13%;
+  background-color: white;
+  border: none;
+  color: #310055;
 }
 
 .SignInPassword{
