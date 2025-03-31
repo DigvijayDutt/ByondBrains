@@ -36,7 +36,7 @@ function Home() {
                 </div>
                 <div className='CardsContainer'>
                     <div className='Card'>
-                        <img className='MainImage' src='src/assets/DS.jpg' />
+                        <img className='MainImage' src='src/assets/img/DS.jpg' />
                         <h4 className='text'>AI with Python and SQL Full course</h4>
                         <div className="brow flexstart mb">
                             <img className='svg' src="src/assets/img/star.svg" alt="" />
@@ -64,7 +64,7 @@ function Home() {
                         </div>
                     </div>
                     <div className='Card'>
-                        <img className='MainImage' src='src/assets/DS.jpg' />
+                        <img className='MainImage' src='src/assets/img/DS.jpg' />
                         <h4 className='text'>AI with Python and SQL Full course</h4>
                         <div className="brow flexstart mb">
                             <img className='svg' src="src/assets/img/star.svg" alt="" />
@@ -90,10 +90,6 @@ function Home() {
                         <h4>Your learning is important. Here is what our previous students across the globe have to say...</h4>
                     </div>
                 </div>
-
-
-
-
                 <div className="TestimonialCards">
                         <div className="Card2">
                             <img src="src/assets/PngItem_4042710.png" alt="Profile" className="ProfileImage" />
@@ -125,16 +121,10 @@ function Home() {
                             </p>
                             <div className="Stars">★★★★★</div>
                         </div>
-                    </div>
+                </div>
 
-                    <h3 className="CommunityHeading">Community contributions by ByondBrains</h3>
-
-
-
-
-
-
-                    <div className="container3">
+                <h3 className="CommunityHeading">Community contributions by ByondBrains</h3>
+                <div className="container3">
             <div className="content-box3">
                 <img src="src/assets/comunity.png" alt="Group of people working" className="image3" />
                 <div className="text-content3">
@@ -143,7 +133,7 @@ function Home() {
                         ByondBrains team has been spreading knowledge across different diverse areas in India. 
                         We value and encourage imparting knowledge versus selling courses.
                     </p>
-                    <button>Begin Your Journey</button>
+                    <button className="CCbutton">Begin Your Journey</button>
                 </div>
             </div>
 
@@ -154,7 +144,7 @@ function Home() {
                         ByondBrains team has been spreading knowledge across different diverse areas in India. 
                         We value and encourage imparting knowledge versus selling courses.
                     </p>
-                    <button>Begin Your Journey</button>
+                    <button className="CCbutton">Begin Your Journey</button>
                 </div>
                 <img src="src/assets/comunity.png" alt="Group of people working" className="image3" />
             </div>
@@ -167,19 +157,10 @@ function Home() {
                         ByondBrains team has been spreading knowledge across different diverse areas in India. 
                         We value and encourage imparting knowledge versus selling courses.
                     </p>
-                    <button>Begin Your Journey</button>
+                    <button className="CCbutton">Begin Your Journey</button>
                 </div>
             </div>
         </div>
-
-                
-
-
-
-
-
-
-
                 <div className='FAQContainer'>
                   <h2 className='FAQTitle'>FAQs</h2>
                     <div className='FAQList'>

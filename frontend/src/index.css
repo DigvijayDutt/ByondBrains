@@ -387,7 +387,7 @@ p {
   margin: 10px 0;
 }
 
-button {
+.CCbutton {
   background-color: #6a0dad;
   color: #ffffff;
   padding: 10px 20px;
@@ -397,6 +397,6 @@ button {
   transition: background 0.3s ease;
 }
 
-button:hover {
+.CCbutton:hover {
   background-color: #5b0aad;
 }
