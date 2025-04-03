@@ -10,30 +10,73 @@ function Home() {
     const [formType, setFormType] = useState("Signin");
     const [isClass, setIsClass] = useState(false);
     const [faqs, setFaqs] = useState([]);
-    const [isLoading, setIsLoading] = useState(true);
-    const [error, setError] = useState(null);
+    const [courses, setCourses] = useState([]);
+    const [isLoading, setIsLoading] = useState({
+        faqs: true,
+        courses: true
+    });
+    const [error, setError] = useState({
+        faqs: null,
+        courses: null
+    });
+    const [expandedDescriptions, setExpandedDescriptions] = useState({});
 
-    // Fetch FAQs from backend
+    // Toggle description expansion
+    const toggleDescription = (courseId) => {
+        setExpandedDescriptions(prev => ({
+            ...prev,
+            [courseId]: !prev[courseId]
+        }));
+    };
+
+    // Fetch FAQs and Courses from backend
     useEffect(() => {
-        const fetchFaqs = async () => {
+        const fetchData = async () => {
             try {
-                const response = await fetch('http://localhost:5000/faqs');
-                if (!response.ok) {
-                    throw new Error('Failed to fetch FAQs');
-                }
-                const data = await response.json();
-                setFaqs(data);
+                // Fetch FAQs
+                const faqResponse = await fetch('http://localhost:5000/faqs');
+                if (!faqResponse.ok) throw new Error('Failed to fetch FAQs');
+                const faqData = await faqResponse.json();
+                setFaqs(faqData);
+
+                // Fetch Courses
+                const courseResponse = await fetch('http://localhost:5000/courses');
+                if (!courseResponse.ok) throw new Error('Failed to fetch courses');
+                const courseData = await courseResponse.json();
+                setCourses(courseData);
+
+                // Initialize expanded state for descriptions
+                const initialExpandedState = {};
+                courseData.forEach(course => {
+                    initialExpandedState[course.courseid] = false;
+                });
+                setExpandedDescriptions(initialExpandedState);
             } catch (err) {
-                setError(err.message);
+                setError(prev => ({
+                    ...prev,
+                    [err.message.includes('FAQs') ? 'faqs' : 'courses']: err.message
+                }));
             } finally {
-                setIsLoading(false);
+                setIsLoading({
+                    faqs: false,
+                    courses: false
+                });
             }
         };
-        fetchFaqs();
+
+        fetchData();
     }, []);
 
     const toggleFAQ = (index) => {
         setOpenFAQ(openFAQ === index ? null : index);
+    };
+
+    // Format price with currency
+    const formatPrice = (price) => {
+        return new Intl.NumberFormat('en-US', {
+            style: 'currency',
+            currency: 'USD'
+        }).format(price);
     };
 
     return (
@@ -54,22 +97,49 @@ function Home() {
 
                 {/* POPULAR COURSES CONTAINER */}
                 <div className='CardsContainer'>
-                    {/* Course cards remain the same */}
-                    {[1, 2, 3].map((_, index) => (
-                        <div className='Card' key={index}>
-                            <img className='MainImage' src='src/assets/img/DS.jpg' alt="Course" />
-                            <h4 className='text'>AI with Python and SQL Full course</h4>
-                            <div className="brow flexstart mb">
-                                {[1, 2, 3, 4].map((_, i) => (
-                                    <img key={i} className='svg' src="src/assets/img/star.svg" alt="Star rating" />
-                                ))}
+                    {isLoading.courses ? (
+                        <div className="loading-message">Loading courses...</div>
+                    ) : error.courses ? (
+                        <div className="error-message">Error: {error.courses}</div>
+                    ) : (
+                        courses.sort((a, b) => a.courseid - b.courseid).slice(0, 3).map((course) => (
+                            <div className='Card' key={course.courseid}>
+                                <img 
+                                    className='MainImage' 
+                                    src={course.imageUrl || 'src/assets/img/DS.jpg'} 
+                                    alt={course.title} 
+                                />
+                                <h4 className='text'>{course.title}</h4>
+                                
+                                {/* Course Description with Read More toggle */}
+                                <div className="course-description">
+                                    {expandedDescriptions[course.courseid] || course.description.length <= 150 
+                                        ? course.description 
+                                        : `${course.description.substring(0, 150)}...`}
+                                    {course.description.length > 150 && (
+                                        <button 
+                                            className="read-more-btn"
+                                            onClick={() => toggleDescription(course.courseid)}
+                                        >
+                                            {expandedDescriptions[course.courseid] ? 'Show less' : 'Read more'}
+                                        </button>
+                                    )}
+                                </div>
+                                
+                                <div className="brow flexstart mb">
+                                    {[1, 2, 3, 4].map((_, i) => (
+                                        <img key={i} className='svg' src="src/assets/img/star.svg" alt="Star rating" />
+                                    ))}
+                                </div>
+                                <div className="brow">
+                                    <p className='text'>{formatPrice(course.price)}</p>
+                                    <a href={`/course/${course.courseid}`}>
+                                        Enroll Now <img className='svg' src="src/assets/img/arrow-right.svg" alt="Arrow" />
+                                    </a>
+                                </div>
                             </div>
-                            <div className="brow">
-                                <p className='text'>$4000</p>
-                                <a href="/">Enroll Now <img className='svg' src="src/assets/img/arrow-right.svg" alt="Arrow" /></a>
-                            </div>
-                        </div>
-                    ))}
+                        ))
+                    )}
                 </div>
 
                 {/* DATABAR WITH IMAGES */}
@@ -124,10 +194,10 @@ function Home() {
                 {/* FAQ SECTION */}
                 <div className='FAQContainer'>
                     <h2 className='FAQTitle'>FAQs</h2>
-                    {isLoading ? (
+                    {isLoading.faqs ? (
                         <div className="loading-message">Loading FAQs...</div>
-                    ) : error ? (
-                        <div className="error-message">Error: {error}</div>
+                    ) : error.faqs ? (
+                        <div className="error-message">Error: {error.faqs}</div>
                     ) : (
                         <div className='FAQList'>
                             {faqs.map((faq, index) => (

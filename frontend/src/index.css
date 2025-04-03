@@ -349,7 +349,7 @@ a{
 
 
 .container3 {
-  background-color: #ffffff; /* Light purple background */
+  background-color: #ffffff; 
   padding: 1px;
   width: 1180px;
 }
@@ -399,4 +399,31 @@ button {
 
 .CCbutton:hover {
   background-color: #5b0aad;
+}
+
+
+/* Course Description Styles */
+.course-description {
+  padding: 10px;
+  color: #4a4a4a;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  height: 80px; /* Fixed height with overflow */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* Show max 3 lines */
+  -webkit-box-orient: vertical;
+  margin: 8px 0;
+}
+
+.Card {
+  height: 410px; 
+  position: relative;
+}
+
+.Card .brow {
+  position: absolute;
+  bottom: 15px;
+  width: calc(100% - 20px);
 }
